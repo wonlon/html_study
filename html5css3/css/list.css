@@ -1,0 +1,309 @@
+/* 图文列表 */
+article header h2{
+    color: #444444;
+    font-size: 16px;
+    border-bottom: solid 1px #d6d6d6;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.piclist li{
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+    margin-right:10px;
+    margin-bottom: 10px;
+    height: 150px;
+    width: 202px;
+}
+.piclist li img{
+    height: 124px;
+    width: 202px;
+    border-radius: 9px;
+    /* margin-right:10px; */
+}
+/* 每间隔三个设置属性 */
+.piclist li:nth-child(3n+3)
+{
+    margin-right:0px;
+}
+.piclist li a:last-child{
+    
+    display: inline-block;
+    vertical-align: bottom;
+    height: 21px;
+    margin: 0px 61px;
+    text-decoration: none;
+    color: darkgrey;
+}
+/* 旋转效果 */
+@-webkit-keyframes piclist{
+    0%{
+        /* 旋转 放大一倍*/
+        -webkit-transform:rotate(0deg) scale(1);
+        /* 放大 */
+        /* -webkit-transform:scale(1); */
+        /* 透明度 */
+        opacity: 0.5;
+        border-radius: 1px;
+    }
+    40%{
+        -webkit-transform:rotate(60deg) scale(2);
+         /* 透明度 */
+         opacity: 0.9;
+    }
+    60%{
+        -webkit-transform:rotate(30deg) scale(1.3);
+        /* 透明度 */
+        opacity: 0.2;
+        border-radius: 100px;
+    }
+    90%{
+        -webkit-transform:rotate(0deg) scale(0.3);
+        /* 透明度 */
+        opacity: 1;
+    }
+
+}
+.piclist li:hover img{
+    -webkit-animation-name: piclist;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+}
+.listnav{
+    clear: both;
+    height: 50px;
+
+}
+.listnav li{
+    display: inline-block;
+    background-color: #3598db;
+    padding:  3px 10px;
+    margin-right: 10px;
+    float: left;
+    /* 颜色渐变 */
+    /* Safari 和 Chrome */
+    -webkit-transition:background-color 0.5s linear ;
+    /* 火狐 */
+    -moz-transition:background-color 0.5s linear ;
+    /* IE9 */
+    -ms-transition:background-color 0.5s linear ;
+    /* 欧朋 */
+    -o-transition:background-color 0.5s linear ;
+    /* w3c标准的 */
+    transition:background-color 0.5s linear ;
+}
+.listnav li a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.listnav li.on, .listnav li:hover{
+    background-color: #222222;
+}
+section .toplist_tit{
+    display: inline-block
+    /* clear: both; */
+}
+section .toplist_tit h3{
+    color: #444444;
+    border-bottom: solid 1px #444444;
+    padding-bottom: 6px;
+}
+
+
+
+section#toplist_first{
+    margin-top: 10px;
+    width: 469px;
+    display: inline-block;
+    vertical-align: top;
+}
+section#toplist_first li:before{
+    content: counter(listxh);
+    background: #444444;
+    padding:  2px 5px;
+    color: #ffffff;
+    margin-right: 5px;
+}
+
+section#toplist_first li:first-child:before,section#toplist_first li:nth-child(2):before,section#toplist_first li:nth-child(3):before
+{
+    background: #2f89c5;
+}
+section#toplist_first li:first-child:before{
+    padding:  2px 7px;
+}
+section#toplist_first li:last-child:before{
+    font-size: 16px;
+    padding: 2px 2px;
+}
+section#toplist_first li{
+    counter-increment: listxh;
+    display: inline-block;
+    width: 100%;
+    vertical-align: bottom;
+    /* 不换行 */
+    white-space: nowrap;
+    overflow: hidden;
+    /* 溢出的文本，使用...代替 */
+    text-overflow: ellipsis;
+    margin-top: 15px;
+
+     /* 颜色渐变 */
+    /* Safari 和 Chrome */
+    -webkit-transition:text-shadow 1s linear ;
+    /* 火狐 */
+    -moz-transition:text-shadow 1s linear ;
+    /* IE9 */
+    -ms-transition:text-shadow 1s linear ;
+    /* 欧朋 */
+    -o-transition:text-shadow 1s linear ;
+    /* w3c标准的 */
+    transition:text-shadow 1s linear ;
+}
+section#toplist_first li:hover{
+    text-shadow: 1px 4px 5px #000000;
+}
+section#toplist_first a{
+    color: #444444;
+    text-decoration: none;
+}
+.toplist_tit_two {
+    margin-top: 20px;
+}
+
+.newslist li{
+    display: inline-block;
+    margin-top: 10px;
+}
+.newslist li a{
+    display: inline-block;
+    width: 345px;
+    vertical-align: top;
+    color: #444444;
+    text-decoration: none;
+}
+.newslist li:nth-child(5n+5){
+    border-bottom: solid 1px #c6c2c2;
+    padding-bottom: 10px;
+}
+
+.newslist li:last-child
+{
+    border-bottom: solid 1px #c6c2c2;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.newslist li time{
+    float: right;
+    display: inline-block;
+    width: 117px;
+    text-align: center;
+    vertical-align: top;
+    color: #444;
+}
+
+
+
+
+ .newslist{
+    margin-top: 10px;
+    width: 469px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+ .newslist li:first-child:before{
+    padding:  2px 7px;
+}
+ .newslist li:last-child:before{
+    font-size: 16px;
+    padding: 2px 2px;
+}
+ .newslist li{
+    float: left;
+    counter-increment: listxh;
+    display: inline-block;
+    width: 100%;
+    vertical-align: bottom;
+    /* 不换行 */
+    white-space: nowrap;
+    overflow: hidden;
+    /* 溢出的文本，使用...代替 */
+    text-overflow: ellipsis;
+    /* margin-top: 15px; */
+
+     /* 颜色渐变 */
+    /* Safari 和 Chrome */
+    -webkit-transition:text-shadow 1s linear ;
+    /* 火狐 */
+    -moz-transition:text-shadow 1s linear ;
+    /* IE9 */
+    -ms-transition:text-shadow 1s linear ;
+    /* 欧朋 */
+    -o-transition:text-shadow 1s linear ;
+    /* w3c标准的 */
+    transition:text-shadow 1s linear ;
+}
+.newslist time{
+    float: right;
+    display: inline-block;
+}
+ .newslist li:hover{
+    text-shadow: 1px 4px 5px #000000;
+}
+ .newslist a{
+    display: inline-block;
+    color: #444444;
+    text-decoration: none;
+}
+/* 内容页 */
+
+header.content_h1 h1{
+    font-weight: normal;
+    margin: 20px 0;
+}
+div.title_bar .bdsharebuttonbox.bdshare-button-style0-16 {
+    display: inline-block;
+    vertical-align: bottom;
+}
+div.title_bar .bdsharebuttonbox.bdshare-button-style0-16 a{
+    border: 0;
+    padding-right: 0px;
+}
+header div.title_bar{
+    font-size: 10px;
+    font-family: "宋体";
+    color: #808080;
+    border-bottom: solid 1px #CAC7C7;
+    padding-bottom: 2px;
+    line-height: 28px;
+}
+header div.title_bar a{
+    color: #3598DB;
+    border-right: solid 1px #CAC7C7;
+    padding-right: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+header div.title_bar time{
+    margin-right: 20px;
+}
+.content_nr{
+    color: #444;
+    padding: 20px 0;
+    text-indent: 34px;
+    line-height: 30px;
+}
+section.xiangguanyuedu{
+    margin-top: 20px;
+    height: 38px;
+    overflow: hidden;
+}
+section.xiangguanyuedu a{
+    text-decoration: none;
+    color: #3598DB;
+}
+section.xiangguanyuedu a{
+    margin-right: 10px;
+}
